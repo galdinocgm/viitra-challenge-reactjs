@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   async function handleAddFood(food) {
     try {
-      // TODO ADD A NEW FOOD PLATE TO THE API
+
     } catch (err) {
       console.log(err);
     }
@@ -30,6 +30,11 @@ const Dashboard = () => {
 
   async function handleDeleteFood(id) {
     // TODO DELETE A FOOD PLATE FROM THE API
+    try {
+      api.delete(`/foods/${id}/`);
+    } catch(err) {
+      console.log(err)
+    }
   }
 
   function toggleModal() {

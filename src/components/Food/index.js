@@ -3,13 +3,21 @@ import React, { useState } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
 
 import { Container } from './styles';
+import api from '../../services/api';
 
 const Food = ({ food, handleDelete, handleEditFood, openEditModal }) => {
   const [isAvailable, setIsAvailable] = useState(food.available);
 
   async function toggleAvailable() {
     // TODO UPDATE STATUS (available)
-    setIsAvailable(!isAvailable);
+
+    // Updating the available status in the API using patch method
+    try {
+      let newAvailableStatus = !food.available;
+      api.patch(`/foods/${food.id}/`, ({available: newAvailableStatus})).then(() => setIsAvailable(!isAvailable));
+    } catch(err) {
+      console.log(err);
+    }
   }
 
   function setEditingFood() {

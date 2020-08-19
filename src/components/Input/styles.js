@@ -6,12 +6,12 @@ export const Container = styled.div`
 
   background: #fff;
   border-radius: 8px;
-  padding: 18px 24px;
+  padding: 12px 24px;
   width: 100%;
   font-size: 16px;
 
   & + div {
-    margin-top: 24px;
+    margin-top: 18px;
   }
 
   h1 {

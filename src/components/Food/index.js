@@ -5,7 +5,7 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 import { Container } from './styles';
 import api from '../../services/api';
 
-const Food = ({ food, handleDelete, handleEditFood, openEditModal }) => {
+const Food = ({ food, handleDelete, handleEditFood, updateFood, openEditModal }) => {
   const [isAvailable, setIsAvailable] = useState(food.available);
 
   async function toggleAvailable() {
@@ -14,7 +14,13 @@ const Food = ({ food, handleDelete, handleEditFood, openEditModal }) => {
     // Updating the available status in the API using patch method
     try {
       let newAvailableStatus = !isAvailable;
-      api.patch(`/foods/${food.id}/`, ({available: newAvailableStatus})).then(() => setIsAvailable(!isAvailable));
+      api.patch(`/foods/${food.id}/`, ({available: newAvailableStatus})).then(() => {
+        setIsAvailable(!isAvailable)
+
+        // Calling the updateFood function to update the food plate in the Dashboard foods state
+        food.available = newAvailableStatus;
+        updateFood(food);
+      });
     } catch(err) {
       console.log(err);
     }

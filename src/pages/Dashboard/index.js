@@ -16,6 +16,20 @@ const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
+  // Function that receives a food plate and updates it in the foods state.
+  function updateFood(food){
+    let newFoodsState = foods;
+
+    for(let i = 0 ; i < foods.length ; i++){
+      if(foods[i].id === food.id){
+        newFoodsState[i] = food;
+        setFoods(newFoodsState);
+        break;
+      }
+    }
+
+  }
+
   // Get all foods from the API
   async function fetchData(){
     let data = await api.get('/foods/').then(res => res.data);
@@ -93,6 +107,7 @@ const Dashboard = () => {
               food={food}
               handleDelete={handleDeleteFood}
               handleEditFood={handleEditFood}
+              updateFood={updateFood}
               openEditModal={toggleEditModal}
             />
           ))}

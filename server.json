@@ -32,7 +32,8 @@
       "name": "Teste",
       "price": "20.00",
       "description": "Teste",
-      "id": 4
+      "id": 4,
+      "available": true
     }
   ]
 }

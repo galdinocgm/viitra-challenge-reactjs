@@ -10,6 +10,10 @@ const ModalAddFood = ({ isOpen, setIsOpen, handleAddFood }) => {
 
   function handleSubmit(data) {
     // TODO ADD A NEW FOOD AND CLOSE THE MODAL
+
+    // Adding the available status in our data object
+    data['available'] = true;
+    
     handleAddFood(data);
     setIsOpen();
   }

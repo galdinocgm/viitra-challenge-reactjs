@@ -16,6 +16,15 @@ const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
+  // Auxiliary function that returns a food with given id
+  function getFoodById(id){
+    for(let food of foods){
+      if(food.id === id){
+        return food;
+      }
+    }
+  }
+
   // Function that receives a food plate and updates it in the foods state.
   function updateFood(food){
     let newFoodsState = foods;
@@ -96,6 +105,7 @@ const Dashboard = () => {
         isOpen={editModalOpen}
         setIsOpen={toggleEditModal}
         editingFood={editingFood}
+        getFoodById={getFoodById}
         handleUpdateFood={handleUpdateFood}
       />
 

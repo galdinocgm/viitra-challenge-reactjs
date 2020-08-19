@@ -9,15 +9,20 @@ const ModalEditFood = ({
   isOpen,
   setIsOpen,
   editingFood,
+  getFoodById,
   handleUpdateFood,
 }) => {
   const formRef = useRef(null);
 
   function handleSubmit(data) {
-    // EDIT A FOOD PLATE AND CLOSE THE MODAL
+    // TODO EDIT A FOOD PLATE AND CLOSE THE MODAL
 
-    // Adding the food id info to our data object
+    // Adding the food id info into our data object
     data['id'] = editingFood;
+
+    let currentEditingFood = getFoodById(editingFood);
+    // Adding the available status info into our data object
+    data['available'] = currentEditingFood.available;
 
     handleUpdateFood(data);
     setIsOpen();

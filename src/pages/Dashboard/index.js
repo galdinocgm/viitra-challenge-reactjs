@@ -16,6 +16,22 @@ const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
+  // Get all foods from the API
+  async function fetchData(){
+    let data = await api.get('/foods/').then(res => res.data);
+    return data;
+  }
+
+  // Updates the foods state with the data fetched from the API
+  async function updateFoodsState(){
+    let data = await fetchData();
+    setFoods(data);
+    console.log(data);
+  }
+
+  // Using the useEffect hook to update the foods state after the component mounts
+  useEffect(() => {updateFoodsState()}, []);
+
   async function handleAddFood(food) {
     try {
 
@@ -65,6 +81,7 @@ const Dashboard = () => {
       />
 
       <FoodsContainer data-testid="foods-list">
+        {console.log(foods)}
         {foods &&
           foods.map(food => (
             <Food

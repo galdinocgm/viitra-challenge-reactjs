@@ -90,6 +90,7 @@ const Dashboard = () => {
               food={food}
               handleDelete={handleDeleteFood}
               handleEditFood={handleEditFood}
+              openEditModal={toggleEditModal}
             />
           ))}
       </FoodsContainer>

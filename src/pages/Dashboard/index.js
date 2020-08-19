@@ -63,6 +63,7 @@ const Dashboard = () => {
 
   function handleEditFood(food) {
     // TODO SET THE CURRENT EDITING FOOD ID IN THE STATE
+    setEditingFood(food.id);
   }
 
   return (

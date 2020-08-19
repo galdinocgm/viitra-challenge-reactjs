@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   async function handleAddFood(food) {
     try {
-
+      api.post('/foods/' , food);
     } catch (err) {
       console.log(err);
     }

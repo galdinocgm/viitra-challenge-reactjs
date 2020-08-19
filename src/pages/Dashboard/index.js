@@ -26,7 +26,6 @@ const Dashboard = () => {
   async function updateFoodsState(){
     let data = await fetchData();
     setFoods(data);
-    console.log(data);
   }
 
   // Using the useEffect hook to update the foods state after the component mounts
@@ -87,7 +86,6 @@ const Dashboard = () => {
       />
 
       <FoodsContainer data-testid="foods-list">
-        {console.log(foods)}
         {foods &&
           foods.map(food => (
             <Food

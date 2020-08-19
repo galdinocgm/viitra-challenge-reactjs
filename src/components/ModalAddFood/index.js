@@ -28,6 +28,10 @@ const ModalAddFood = ({ isOpen, setIsOpen, handleAddFood }) => {
         <Input name="price" placeholder="Ex: 19.90" />
 
         <Input name="description" placeholder="Descrição" />
+
+        <Input name="quantity" placeholder="Quantidade" />
+        <Input name="timeToCook" placeholder="Tempo para cozinhar" />
+        
         <button>
           <p className="text">Adicionar Prato</p>
           <div className="icon">

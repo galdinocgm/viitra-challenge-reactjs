@@ -34,6 +34,9 @@ const ModalEditFood = ({
 
         <Input name="description" placeholder="Descrição" />
 
+        <Input name="quantity" placeholder="Quantidade" />
+        <Input name="timeToCook" placeholder="Tempo para cozinhar" />
+
         <button type="submit">
           <div className="text">Editar Prato</div>
           <div className="icon">

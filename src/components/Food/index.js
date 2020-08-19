@@ -9,6 +9,7 @@ const Food = ({ food, handleDelete, handleEditFood }) => {
 
   async function toggleAvailable() {
     // TODO UPDATE STATUS (available)
+    setIsAvailable(!isAvailable);
   }
 
   function setEditingFood() {

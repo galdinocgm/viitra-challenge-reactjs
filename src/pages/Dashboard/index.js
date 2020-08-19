@@ -42,6 +42,11 @@ const Dashboard = () => {
 
   async function handleUpdateFood(food) {
     // TODO UPDATE A FOOD PLATE ON THE API
+    try{
+      api.put(`/foods/${food.id}` , food);
+    } catch(err) {
+      console.log(err);
+    }
   }
 
   async function handleDeleteFood(id) {

@@ -1,11 +1,14 @@
 {
   "foods": [
     {
-      "image": "https://picsum.photos/300",
-      "name": "PratoEditado",
-      "price": "20.00",
-      "description": "Testando a edição de pratos",
-      "id": 1
+      "id": 1,
+      "name": "Ao molho",
+      "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas.",
+      "price": "19.90",
+      "available": true,
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
+      "quantity": 10,
+      "timeToCook": "30min"
     },
     {
       "id": 2,
@@ -26,14 +29,6 @@
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
       "quantity": 5,
       "timeToCook": "20min"
-    },
-    {
-      "image": "https://picsum.photos/300",
-      "name": "Teste",
-      "price": "20.00",
-      "description": "Teste",
-      "id": 4,
-      "available": true
     }
   ]
 }

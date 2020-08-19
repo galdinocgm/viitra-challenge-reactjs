@@ -15,6 +15,12 @@ const ModalEditFood = ({
 
   function handleSubmit(data) {
     // EDIT A FOOD PLATE AND CLOSE THE MODAL
+
+    // Adding the food id info to our data object
+    data['id'] = editingFood;
+
+    handleUpdateFood(data);
+    setIsOpen();
   }
 
   return (

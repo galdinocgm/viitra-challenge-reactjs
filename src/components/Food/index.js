@@ -13,7 +13,7 @@ const Food = ({ food, handleDelete, handleEditFood, openEditModal }) => {
 
     // Updating the available status in the API using patch method
     try {
-      let newAvailableStatus = !food.available;
+      let newAvailableStatus = !isAvailable;
       api.patch(`/foods/${food.id}/`, ({available: newAvailableStatus})).then(() => setIsAvailable(!isAvailable));
     } catch(err) {
       console.log(err);

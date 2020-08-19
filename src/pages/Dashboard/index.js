@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   async function handleAddFood(food) {
     try {
-      api.post('/foods/' , food);
+      api.post('/foods/' , food).then(updateFoodsState);
     } catch (err) {
       console.log(err);
     }
@@ -42,7 +42,7 @@ const Dashboard = () => {
   async function handleUpdateFood(food) {
     // TODO UPDATE A FOOD PLATE ON THE API
     try{
-      api.put(`/foods/${food.id}` , food);
+      api.put(`/foods/${food.id}` , food).then(updateFoodsState);
     } catch(err) {
       console.log(err);
     }
@@ -51,7 +51,7 @@ const Dashboard = () => {
   async function handleDeleteFood(id) {
     // TODO DELETE A FOOD PLATE FROM THE API
     try {
-      api.delete(`/foods/${id}/`);
+      api.delete(`/foods/${id}/`).then(updateFoodsState);
     } catch(err) {
       console.log(err)
     }

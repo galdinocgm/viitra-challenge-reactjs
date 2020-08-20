@@ -8,6 +8,10 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   body {
     background: #fff;
     color: #FFF;

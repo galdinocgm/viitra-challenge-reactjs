@@ -55,6 +55,12 @@ const Dashboard = () => {
   // Using the useEffect hook to update the foods state after the component mounts
   useEffect(() => {updateFoodsState()}, []);
 
+  /* Nota: Atualmente, após cada operação de adicionar/atualizar/excluir, a atualização 
+  em real-time está sendo feita fazendo duas requisições para a API, pois após cada método de
+  POST/PUT/DELETE, está sendo chamada a função updateFoodsState, que faz uma outra requisição
+  para a API. Isso poderia ser otimizado tratando a atualização do estado pelo front-end, assim,
+  fazendo apenas uma requisição e melhorando a experiência do usuário.*/
+
   async function handleAddFood(food) {
     try {
       api.post('/foods/' , food).then(updateFoodsState);

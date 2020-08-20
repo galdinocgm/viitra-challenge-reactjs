@@ -51,6 +51,8 @@ export const FoodSpecificsCard = styled.div`
     }
 
     .middle-container h2 img{
+        position: relative;
+        top: 0.5rem;
         padding: 0 1rem;
     }
 `;

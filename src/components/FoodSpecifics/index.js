@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 import api from '../../services/api.js'
+import { FoodSpecificsContainer, FoodSpecificsCard } from './styles.js'
+
+import pizzaImg from './imgs/pizza.png'
+import cookImg from './imgs/cook.png'
 
 const FoodSpecifics = (props) => {
 
@@ -33,9 +37,24 @@ const FoodSpecifics = (props) => {
     } , []);
 
     return(
-        <>           
-            <h1>Hello World</h1>
-        </>
+        <FoodSpecificsContainer>
+            <FoodSpecificsCard>
+                <div className="img-top-container">
+                    <img src={food.image} alt=""/>
+                </div>
+                <div className="middle-container">
+                    <h1>{food.name}</h1>
+                    <h2>
+                        <img src={pizzaImg}/>
+                        Quantidade: {food.quantity}
+                    </h2>
+                    <h2>
+                        <img src={cookImg} />
+                        Tempo para cozinhar: {food.timeToCook}
+                    </h2>
+                </div>
+            </FoodSpecificsCard>
+        </FoodSpecificsContainer>
     );
 }
 

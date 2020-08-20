@@ -7,6 +7,12 @@ export const FoodSpecificsContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .go-back-arrow{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
 `;
 
 export const FoodSpecificsCard = styled.div`

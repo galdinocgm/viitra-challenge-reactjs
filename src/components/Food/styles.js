@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   background: #f0f0f5;
   border-radius: 8px;
+  max-width: 30%;
+  margin: 1rem 0;
 
   header {
     background: #ffb84d;

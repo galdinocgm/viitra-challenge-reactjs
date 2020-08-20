@@ -29,6 +29,16 @@
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
       "quantity": 5,
       "timeToCook": "20min"
+    },
+    {
+      "image": "https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0R0f000010ZDNXEA4/5c001711e4b00010cfa42362.jpg&w=710&h=462",
+      "name": "Pizza",
+      "price": "30.00",
+      "description": "Uma deliciosa pizza!",
+      "quantity": "5",
+      "timeToCook": "20min",
+      "available": true,
+      "id": 4
     }
   ]
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { FiEdit3, FiTrash } from 'react-icons/fi';
 
+import { Link } from 'react-router-dom'
+
 import { Container } from './styles';
 import api from '../../services/api';
 
@@ -34,16 +36,18 @@ const Food = ({ food, handleDelete, handleEditFood, updateFood, openEditModal })
 
   return (
     <Container available={isAvailable}>
-      <header>
-        <img src={food.image} alt={food.name} />
-      </header>
-      <section className="body">
-        <h2>{food.name}</h2>
-        <p>{food.description}</p>
-        <p className="price">
-          R$ <b>{food.price}</b>
-        </p>
-      </section>
+      <Link to={`/food/${food.id}/`}>
+        <header>
+          <img src={food.image} alt={food.name} />
+        </header>
+        <section className="body">
+          <h2>{food.name}</h2>
+          <p>{food.description}</p>
+          <p className="price">
+            R$ <b>{food.price}</b>
+          </p>
+        </section>
+      </Link>
       <section className="footer">
         <div className="icon-container">
           <button

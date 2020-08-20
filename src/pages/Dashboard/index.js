@@ -113,16 +113,14 @@ const Dashboard = () => {
       <FoodsContainer data-testid="foods-list">
         {foods &&
           foods.map(food => (
-            <Link to={`/food/${food.id}/`}>
-              <Food
-                key={food.id}
-                food={food}
-                handleDelete={handleDeleteFood}
-                handleEditFood={handleEditFood}
-                updateFood={updateFood}
-                openEditModal={toggleEditModal}
-              />
-            </Link>
+            <Food
+              key={food.id}
+              food={food}
+              handleDelete={handleDeleteFood}
+              handleEditFood={handleEditFood}
+              updateFood={updateFood}
+              openEditModal={toggleEditModal}
+            />
           ))}
       </FoodsContainer>
     </>

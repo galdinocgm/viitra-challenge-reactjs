@@ -39,6 +39,26 @@
       "timeToCook": "20min",
       "available": true,
       "id": 4
+    },
+    {
+      "image": "https://img.itdg.com.br/tdg/images/recipes/000/138/558/325115/325115_original.jpg?mode=crop&width=710&height=400",
+      "name": "Lasanha",
+      "price": "23.90",
+      "description": "Uma deliciosa lasanha!",
+      "quantity": "2",
+      "timeToCook": "20min",
+      "available": true,
+      "id": 5
+    },
+    {
+      "image": "https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0R0f00000wuoslEAA/59ef8d3ae4b03042f66e2829.jpg&w=620&h=400",
+      "name": "Peixe frito",
+      "price": "41.00",
+      "description": "Peixe frito",
+      "quantity": "5",
+      "timeToCook": "30min",
+      "available": true,
+      "id": 6
     }
   ]
 }

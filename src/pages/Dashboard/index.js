@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 import Header from '../../components/Header';
 
@@ -112,14 +113,16 @@ const Dashboard = () => {
       <FoodsContainer data-testid="foods-list">
         {foods &&
           foods.map(food => (
-            <Food
-              key={food.id}
-              food={food}
-              handleDelete={handleDeleteFood}
-              handleEditFood={handleEditFood}
-              updateFood={updateFood}
-              openEditModal={toggleEditModal}
-            />
+            <Link to={`/food/${food.id}/`}>
+              <Food
+                key={food.id}
+                food={food}
+                handleDelete={handleDeleteFood}
+                handleEditFood={handleEditFood}
+                updateFood={updateFood}
+                openEditModal={toggleEditModal}
+              />
+            </Link>
           ))}
       </FoodsContainer>
     </>
